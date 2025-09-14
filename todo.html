@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="todo.png" type="image/x-icon">
+  <link rel="stylesheet" href="todo.css">
+  <title>Todo List</title>
+</head>
+
+<body>
+  <h1 onclick="toogleTheme();" title="change theme">Todo List</h1>
+  <ul id="list-container">
+  </ul>
+  <button class="openIt" onclick="openModal()"><svg height="24px" viewBox="0 -960 960 960" width="24px">
+      <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+    </svg></button>
+  <dialog class="int">
+    <h2>Add Todo</h2>
+    <span onclick="closeModal()"><svg viewBox="0 -960 960 960">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg></span>
+    <form>
+      <input type="date" id="date">
+      <input type="text" id="text" autocomplete="off" placeholder="todo name">
+      <div class="controls">
+        <button type="button" onclick="closeModal()">Cancel</button>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="todo.js"></script>
+</body>
+
+</html>
